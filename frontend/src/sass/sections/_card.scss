@@ -1,0 +1,90 @@
+.card {
+  font-family: "Open Sans";
+  height: 270px;
+  width: 200px;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, var(--orange), rgb(109, 232, 95));
+  align-items: center;
+  border: solid 2px var(--pink);
+  padding: 10px;
+  margin-top: 15px;
+
+  .card-content {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    hr {
+      color: var(--pink);
+      margin: 5px 0;
+    }
+
+    .card-icon {
+      top: -37px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 2px solid var(--pink);
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--orange);
+      margin-bottom: 10rem;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 5px 3px 15px;
+      margin-top: 1rem;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+    .card-amount {
+      margin: 5px 3px;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--pink);
+
+      span {
+        color: #000;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+
+    .price {
+      margin: 5px 3px;
+      color: var(--pink);
+      font-size: 14px;
+
+      span {
+        color: #000;
+        text-transform: capitalize;
+        font-size: 16px;
+      }
+    }
+    .card-people-paid {
+      margin: 5px 3px;
+      font-size: 14px;
+      font-weight: 500;
+      bottom: 5px;
+      margin: 10px;
+      color: var(--pink);
+
+      span {
+        font-size: 16px;
+        color: #000;
+      }
+    }
+  }
+}

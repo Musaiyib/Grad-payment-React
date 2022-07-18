@@ -1,0 +1,215 @@
+.payment {
+  margin: 1rem 0 0;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 32px;
+    .content {
+      margin-top: 0rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      z-index: 3;
+      align-items: flex-start;
+      form {
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        flex-direction: column;
+        margin: 0px 40px;
+        .formInput {
+          margin-top: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          input {
+            font-size: 12px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px 0;
+            padding: 10px 6px;
+            width: 270px;
+            text-transform: uppercase;
+          }
+          button {
+            margin: 10px 0;
+            height: 15px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .sub-title {
+          color: var(--pink);
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          margin: 10px 0px;
+          font-size: 16px;
+        }
+        .title {
+          color: var(--accent-color1);
+          font-size: 40px;
+          margin: 10px 0px;
+          font-family: "Roboto", sans-serif;
+        }
+        .description {
+          font-size: 12px;
+          margin: 2px 0px;
+          color: var(--accent-color3);
+        }
+        .pageBtn {
+          color: var(--accent-color1);
+          background-color: var(--background);
+          font-weight: bold;
+          padding: 1rem 2rem;
+          font-size: 16px;
+          text-decoration: none;
+          border-radius: 2rem;
+          box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+          border: solid 3px transparent;
+          background-image: linear-gradient(
+              rgba(255, 255, 255, 0),
+              rgba(255, 255, 255, 0)
+            ),
+            linear-gradient(101deg, var(--pink), var(--orange));
+          background-origin: border-box;
+          background-clip: content-box, border-box;
+          box-shadow: 2px 1000px 1px var(--background) inset;
+          transition: 0.5s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    .image-container {
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      .image {
+        img {
+        }
+      }
+      .ellipse-container {
+        .ellipse {
+          z-index: -1;
+          position: absolute;
+          height: 15rem;
+          width: 15rem;
+          filter: blur(100px);
+        }
+        .pink {
+          top: 40%;
+          right: 40%;
+          background-color: var(--pink);
+        }
+        .orange {
+          bottom: 40%;
+          left: 40%;
+          background-color: var(--orange);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 430px) and (max-width: 1080px) {
+  .payment {
+    padding: 1rem;
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 1rem;
+    .container {
+      font-size: 16px;
+      grid-template-columns: 0.7fr;
+      .content {
+        width: 100%;
+        form {
+          margin: 0px 0px;
+          width: 100%;
+        }
+      }
+      .image-container {
+        position: absolute;
+        right: 10%;
+        top: 30%;
+        .image {
+          img {
+            height: 10rem;
+            width: 10rem;
+          }
+        }
+        .ellipse-container {
+          .ellipse {
+            height: 6rem;
+            width: 6rem;
+            filter: blur(30px);
+          }
+          .pink {
+            right: 10%;
+          }
+          .orange {
+            left: -5%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 530px) {
+  .payment {
+    padding: 1rem;
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 1rem;
+    .container {
+      font-size: 16px;
+      grid-template-columns: 0.7fr;
+      display: flex;
+      .content {
+        flex: 1;
+        width: 100%;
+        form {
+          margin: 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+      .image-container {
+        position: absolute;
+        right: 0%;
+        top: 30%;
+        .image {
+          display: none;
+          img {
+            display: none;
+            height: 7rem;
+            width: 7rem;
+          }
+        }
+        .ellipse-container {
+          .ellipse {
+            height: 6rem;
+            width: 6rem;
+            filter: blur(30px);
+          }
+          .pink {
+            right: 10%;
+          }
+          .orange {
+            left: -5%;
+          }
+        }
+      }
+    }
+  }
+}
